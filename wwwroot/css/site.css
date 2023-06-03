@@ -1,0 +1,84 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+.t ul {
+  margin: 13px;
+}
+
+.t li {
+  display: inline-block;
+  margin: 0px 15px;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: bolder;
+  color: black;
+  transition: 0.3s;
+}
+
+.t li:hover {
+  color: rgb(87, 82, 82);
+}
+
+.t li img {
+  width: 100px;
+  height: 100%;
+}
+
+.card-hg {
+  height: 100;
+}
+
+.reng {
+  background-color: rgb(243, 233, 233) !important;
+  border-radius: 30px;
+}
+.reng img{
+  width: 100%;
+  height: 100px;
+}
+ a:link{
+  text-decoration: none;
+}
+ a:visited{
+  color: rgb(0, 0, 0);
+}
+ a:hover{
+  color: rgb(196, 176, 168)!important;
+}
+.text-box1{
+  margin-bottom: 0px;
+  background-color: transparent;
+  width: 100%;
+  height: 40px;
+  font-size: 30px;
+  border-radius: 8px;
+  color: black;
+}
+.text-box2{
+  margin-bottom: 0px;
+  border-radius: 8px;
+  background-color: transparent;
+  width: 100%;
+  height: 40px;
+  font-size: 30px;
+  color: black;
+}

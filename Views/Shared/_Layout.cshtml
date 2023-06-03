@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - dotnetodev</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/dotnetodev.styles.css" asp-append-version="true" />
+</head>
+<body>
+  <div class="col-12 t d-inline-block text-center" style="background-color: #1cb3c6;">
+    <ul style="a:link{color:red;}">
+      <li><a href="/">AnaSayfa</a></li>
+      <li><img src="~/img/a101-aktuel-market-logo-indir-4.jpg" alt=""></li>
+      <li><a href="Products/Giris">Giriş Yap</a></li>/
+      <li><a href="Products/Add">Üye ol</a></li>
+    </ul>
+  </div>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2023 - dotnetodev - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

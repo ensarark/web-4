@@ -1,0 +1,65 @@
+@{
+    ViewData["Title"] = "Giris";
+}
+@model Products
+<form method="post" action="islem.html" class="col-12 mt-4 from" onsubmit="return kontrol(this);">
+                      <div class="col-3 mx-auto  text-center">
+  <input name="adiniz" class=" border-0 border-bottom text-box1 "style="font-size: 20px; color: black;"  placeholder="Adınız"><br>
+
+                        <input name="sifre" type="password" class=" border-0 border-bottom text-box2 " style="font-size: 20px;" placeholder="Şifreniz"><br><br>
+                        <input type="submit"  class="btn btn-outline-dark " value="Devam Et">
+
+                        <p class="text-dark" id="gizle" style="position: absolute;bottom: 0;display: none;">Sende hemen <a href="http://localhost/üyeol.php">üye ol</a></p>
+                </div>
+                      </div>
+</form>
+
+
+<script>    
+   
+     function kontrol(form) {
+        var adiniz = form.adiniz.value;
+        var sifre = form.sifre.value;
+        var sonuc=document.getElementById("sonuc");
+        var gizle=document.getElementById("gizle");
+        var ad ="ensar";
+        var sf ="1234"
+        var son=3;
+
+        if (adiniz.length === 0) {
+            alert("Lütfen Adınızı Girin");
+            return false;
+        }
+
+        if (sifre.length === 0) {
+            alert("Lütfen şifrenizi girin");
+            return false;
+        }
+        if (adiniz==ad && sifre==sf) {
+            window.location = "/Products"
+            return false;
+        }
+        else{
+            alert("Lütfen Şifreniiz veya Adınızı Kontrol Ediniz ")
+            sonuc.value=Number(sonuc.value)+1;
+            console.log(sonuc.value)
+            if(sonuc.value==3){
+             gizle.style.display="block"
+            }
+            return false;
+        }
+
+        return true;
+    }
+    function arttir(){
+ var tr =document.getElementById("tr");
+var sonuc=document.getElementById("sonuc");
+sonuc.value=Number(sonuc.value)+1;
+console.log(sonuc.value)
+if(sonuc.value==3)
+{
+  tr.style.display="block"
+}
+}
+
+</script>

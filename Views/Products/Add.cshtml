@@ -1,0 +1,36 @@
+@{
+    ViewData["Title"] = "Add";
+}
+@model Products
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+<div class="container  mt-3 ">
+ <div class="col-3 mx-auto  text-center"> 
+  <h2 >Kayıt Ol</h2>
+   <form class="form-horizontal " asp-controller="Products"  method="post">
+  <div class="mb-3 mt-3  mx-auto">
+    <label class="form-label float-start text-dark" for="Name">Adınız:</label>
+    <input type="text" class="form-control"  placeholder="Adını giriniz." asp-for="FirstName">
+  </div>
+  <div class="mb-3  mx-auto">
+    <label for="Price" class="form-label float-start">SoyAdınız:</label>
+    <input type="text" class="form-control"  placeholder="SoyAdını giriniz" asp-for="LastName">
+  </div>
+  <div class="mb-3  mx-auto">
+    <label for="Price" class="form-label float-start">Yaşınız:</label>
+    <input type="number" class="form-control"  placeholder="Yaşınızı Giriniz" asp-for="Age">
+  </div>
+  <div class="mb-3  mx-auto">
+    <label for="Price" class="form-label float-start">Ne kadar süre çalışacağınız:</label>
+    <input type="text" class="form-control"  placeholder="Ne kadar çalışacağınızı giriniz" asp-for="length">
+  </div>
+  <div class="mb-3  mx-auto">
+    <label for="Price" class="form-label float-start">Ne kadar süre çalışacağınız:</label>
+    <input type="text" class="form-control"  placeholder="Ne kadar çalışacağınızı giriniz" asp-for="wage">
+  </div>
+ 
+ <a href="/"> <button type="submit"  class="btn btn-primary col-3 "> Add</button></a>
+ <asp>
+ </form>
+ </div>
+</div>
